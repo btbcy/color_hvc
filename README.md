@@ -1,3 +1,5 @@
+# Color Extended Visual Cryptography Using Error Diffusion
+
 ## How to run
 
 ```
