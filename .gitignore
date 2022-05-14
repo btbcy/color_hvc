@@ -1,3 +1,18 @@
+*.zip
+*.7z
+*.png
+*.jpg
+*.tif
+*.bmp
+*.avi
+*Identifier
+test*
+
+# temp file
+~$*
+~*.tmp
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
