@@ -1,5 +1,6 @@
 # Color Extended Visual Cryptography Using Error Diffusion
 
+![demo](./output_image/demo.gif)
 ## How to run
 
 ```
@@ -52,4 +53,5 @@ python color_hvc.py -d -ip src_image -if shares_1.png shares_2.png shares_3.png 
 ```
 
 ## References
+
 Kang, I., et al. (2010). "Color extended visual cryptography using error diffusion." IEEE transactions on image processing 20(1): 132-145.
