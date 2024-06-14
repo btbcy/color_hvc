@@ -1,7 +1,12 @@
 # Color Extended Visual Cryptography Using Error Diffusion
 
+Unofficial implementation of "Color extended visual cryptography using error diffusion". Secret message is encoded into multiple images (shares) by error diffusion halftoning. These shares can be combined to reveal the original message without any digital processing.
+
 ![demo](./output_image/demo.gif)
-## How to run
+
+## Usage
+
+Run the `color_hvc.py` script with the following options:
 
 ```
 usage: color_hvc.py [-h] [-s SCHEME SCHEME] -ip INPUT_PATH -if INPUT_FNAMES [INPUT_FNAMES ...] [-m MESSAGE] -op
@@ -37,8 +42,7 @@ optional arguments:
 python color_hvc.py -s 3 4 -ip src_image -if Lena.png Baboon.png Barbara.bmp House.bmp -m peppers.png -op output_image -r 128 128 -d -odf recover.png
 ```
 
-will take peppers as message and lena, baboon, barbara, house as inputs under ./src_image and output to ./output_image.
-Since -d flag is on, decrypted image to ./output_image/recover.png
+This command encrypts the message image `peppers.png` using the images `Lena.png`, `Baboon.png`, `Barbara.bmp`, and `House.bmp` located in the `src_image` directory. The decrypted image are saved in the `output_image` directory.
 
 ### Example for encryption only
 
@@ -46,12 +50,20 @@ Since -d flag is on, decrypted image to ./output_image/recover.png
 python color_hvc.py -s 3 4 -ip src_image -if Lena.png Baboon.png Barbara.bmp House.bmp -m peppers.png -op output_image -r 128 128
 ```
 
+This command encrypts the message image `peppers.png` using the specified input images without performing decryption.
+
 ### Example for decryption only
 
 ```
 python color_hvc.py -d -ip src_image -if shares_1.png shares_2.png shares_3.png -op output_image -odf recover.png
 ```
 
+This command decrypts the shares `shares_1.png`, `shares_2.png`, and `shares_3.png` from the `src_image` directory to produce the recovered message in `output_image`.
+
 ## References
 
 Kang, I., et al. (2010). "Color extended visual cryptography using error diffusion." IEEE transactions on image processing 20(1): 132-145.
+
+## Acknowledgements
+
+This project is based on the paper by Kang, I., et al. (2010) with modifications. Most concepts and methodologies implemented in this project are derived from their research. This is an unofficial implementation intended for educational and research purposes.
